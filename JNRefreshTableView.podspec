@@ -13,8 +13,10 @@ Pod::Spec.new do |s|
   s.source        = { :git => "https://github.com/Yigol2008/JNRefreshTableView.git", :tag => "#{s.version.to_s}" }
   s.source_files  = "JNRefreshTableView/*.{h,m}"
 
-  s.dependency "MJRefresh"
-  s.dependency "DZNEmptyDataSet"
+#  s.module_name = "JNRefreshTableView" 
+
+#  s.dependency "MJRefresh", "~> 3.1.0"
+#  s.dependency "DZNEmptyDataSet", "~> 1.8"
 
 end
 
