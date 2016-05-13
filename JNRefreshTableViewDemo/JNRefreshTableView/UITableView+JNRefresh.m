@@ -27,7 +27,7 @@ static const char RefreshTableViewLoadNewDataKey = '\0';
         // 设置自动切换透明度(在导航栏下面自动隐藏)
         header.automaticallyChangeAlpha = YES;
         // 隐藏时间
-        header.lastUpdatedTimeLabel.hidden = NO;
+        header.lastUpdatedTimeLabel.hidden = YES;
         // 设置文字
         [header setTitle:@"下拉刷新" forState:MJRefreshStateIdle];
         [header setTitle:@"松开立即刷新" forState:MJRefreshStatePulling];
