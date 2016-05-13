@@ -8,7 +8,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "UIScrollView+EmptyDataSet.h"
+#import <DZNEmptyDataSet/UIScrollView+EmptyDataSet.h>
 
 typedef void(^JNRefreshTableViewLoadNewData) ();
 typedef void(^JNRefreshTableViewLoadMoreData) ();

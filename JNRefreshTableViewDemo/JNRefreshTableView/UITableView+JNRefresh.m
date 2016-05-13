@@ -9,7 +9,7 @@
 
 #import "UITableView+JNRefresh.h"
 #import <objc/runtime.h>
-#import "MJRefresh.h"
+#import <MJRefresh/MJRefresh.h>
 
 
 @implementation UITableView (JNRefresh)

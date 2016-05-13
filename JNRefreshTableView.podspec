@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.requires_arc  = true
   s.author        = { "Yigol2008" => "yigol2008@163.com" }
 
-  s.summary       = "集成刷新控件，无数据时显示默认的图片"
+  s.summary       = "集成刷新控件"
   s.description   = "集成刷新控件，无数据时显示默认的图片"
 
   s.homepage      = "https://github.com/Yigol2008/JNRefreshTableView"
