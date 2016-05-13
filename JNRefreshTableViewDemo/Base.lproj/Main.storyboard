@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="diW-Ng-u9Z">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gi3-eM-SKF">
+                                <rect key="frame" x="58" y="100" width="204" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="7rx-m0-35b"/>
+                                    <constraint firstAttribute="width" constant="204" id="Rec-SM-Sqb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="第一次进入没数据"/>
+                                <connections>
+                                    <segue destination="IS0-AU-6SF" kind="show" identifier="bbb" id="8nr-OL-z3z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZxR-NG-mRe">
+                                <rect key="frame" x="58" y="220" width="204" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="204" id="ZbR-el-b5A"/>
+                                    <constraint firstAttribute="height" constant="70" id="i5A-EN-jWo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="第一次进入有数据"/>
+                                <connections>
+                                    <segue destination="IS0-AU-6SF" kind="show" identifier="aaa" id="Orw-XT-veO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gi3-eM-SKF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="4z4-qM-eVy"/>
+                            <constraint firstItem="ZxR-NG-mRe" firstAttribute="top" secondItem="gi3-eM-SKF" secondAttribute="bottom" constant="50" id="6Ne-gW-th5"/>
+                            <constraint firstItem="ZxR-NG-mRe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="H2X-47-VN8"/>
+                            <constraint firstItem="gi3-eM-SKF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PGs-N5-q0r"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="EgZ-mt-9zB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="16" y="227"/>
+        </scene>
+        <!--Refresh View Controller-->
+        <scene sceneID="78w-hZ-qBk">
+            <objects>
+                <tableViewController id="IS0-AU-6SF" customClass="RefreshViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="8FW-vf-NXD">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="9YV-KE-4Lm">
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9YV-KE-4Lm" id="5K3-0R-dnm">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="IS0-AU-6SF" id="EX0-QO-KYT"/>
+                            <outlet property="delegate" destination="IS0-AU-6SF" id="06G-8K-pPh"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="0kI-kC-E8F">
+                        <nil key="title"/>
+                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="bh9-SU-UUG">
+                            <rect key="frame" x="8" y="7" width="157" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <state key="normal" title="无数据"/>
+                            <connections>
+                                <action selector="noDataAction:" destination="IS0-AU-6SF" eventType="touchUpInside" id="7Fy-kP-mPx"/>
+                            </connections>
+                        </button>
+                        <barButtonItem key="rightBarButtonItem" id="qJx-Ls-O9w">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kNg-0Y-ldh">
+                                <rect key="frame" x="171" y="7" width="133" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="有数据"/>
+                                <connections>
+                                    <action selector="hadDataAction:" destination="IS0-AU-6SF" eventType="touchUpInside" id="sHe-hg-nFd"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EMc-lR-8M5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="429" y="227"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vHM-0l-QTp">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="diW-Ng-u9Z" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="XzY-Vz-GhP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="X3A-wA-apF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vKn-Rf-vRm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-400" y="227"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Orw-XT-veO"/>
+    </inferredMetricsTieBreakers>
+</document>
